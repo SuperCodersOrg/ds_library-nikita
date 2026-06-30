@@ -5,7 +5,8 @@
 
 // 1. Destructor tracking class 
 // Issue: Objects allocate heap memory and rely on destructor to free it
-// Result: Destructor is NOT called properly for removed/reallocated elements → memory leakstruct Tracker {
+// Result: Destructor is NOT called properly for removed/reallocated elements → memory leak
+struct Tracker {
     int* p;
 
     Tracker() {
