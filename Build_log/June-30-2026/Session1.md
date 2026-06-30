@@ -1,7 +1,7 @@
 # Build Log – Repository Setup & Initial Push
 
 **Date:** 30 June 2026
-**Time:** 10:00  - 12:00
+**Time:** 10:00  \- 12:00
 
 ## Overview
 
