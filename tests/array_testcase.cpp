@@ -353,5 +353,43 @@ cout << "\n===== COPY CONSTRUCTOR TESTS =====\n";
     cout << endl;
 
 
+
+//REMOVE  TEST CASES
+
+    cout << "\n===== REMOVE TESTS =====\n";
+
+    DynamicArray<int> r1;
+    r1.append(10); r1.append(20); r1.append(30);
+    r1.remove(1);
+    for(int i=0;i<r1.size();i++) cout << r1.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<double> r2;
+    r2.append(1.1); r2.append(2.2); r2.append(3.3);
+    r2.remove(0);
+    for(int i=0;i<r2.size();i++) cout << r2.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<char> r3;
+    r3.append('A'); r3.append('B'); r3.append('C');
+    r3.remove(2);
+    for(int i=0;i<r3.size();i++) cout << r3.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<string> r4;
+    r4.append("One"); r4.append("Two");
+    r4.remove(0);
+    for(int i=0;i<r4.size();i++) cout << r4.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<Student> r5;
+    r5.append(Student("Ali",1));
+    r5.append(Student("Sara",2));
+    r5.remove(1);
+    for(int i=0;i<r5.size();i++)
+        cout << r5.get(i).name << " ";
+    cout << endl;
+
+
     return 0;
 }
