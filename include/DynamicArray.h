@@ -299,6 +299,28 @@ public:
 
 
 // =========================
+// Insert
+// =========================
+void insert(int index, const T& value){
+    if (index < 0 || index > currSize){
+        throw std::out_of_range("DynamicArray::insert - index out of range");
+    }
+
+    if (currSize == currCap){
+        resize(currCap * 2);
+    }
+
+    for (int i = currSize; i > index; i--){
+        data[i] = data[i - 1];
+    }
+
+    data[index] = value;
+    currSize++;
+}
+
+
+
+// =========================
 // Size
 // =========================
 
