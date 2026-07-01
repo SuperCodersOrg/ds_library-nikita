@@ -319,6 +319,27 @@ void insert(int index, const T& value){
 }
 
 
+// =========================
+// Remove
+// =========================
+
+void remove(int index)
+{
+    if (index < 0 || index >= currSize){
+        throw std::out_of_range("DynamicArray::remove - index out of range");
+    }
+
+    for (int i = index; i < currSize - 1; i++){
+        data[i] = data[i + 1];
+    }
+
+    currSize--;
+    if (currSize <= currCap / 4 &&
+        currCap / 2 >= MIN_CAPACITY){
+        resize(currCap / 2);
+    }
+}
+
 
 // =========================
 // Size
