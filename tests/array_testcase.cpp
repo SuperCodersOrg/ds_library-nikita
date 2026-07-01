@@ -281,5 +281,35 @@ cout << "\n===== COPY CONSTRUCTOR TESTS =====\n";
     DynamicArray<Student> cc10(cc9);
     cout << cc10.get(0).name << endl;
 
+
+
+// Copy Assignment Operator 
+    cout << "\n===== ASSIGNMENT OPERATOR TESTS =====\n";
+
+    DynamicArray<int> o1,o2;
+    o1.append(10);
+    o2=o1;
+    cout<<o2.get(0)<<endl;
+
+    DynamicArray<double> o3,o4;
+    o3.append(5.5);
+    o4=o3;
+    cout<<o4.get(0)<<endl;
+
+    DynamicArray<char> o5,o6;
+    o5.append('Z');
+    o6=o5;
+    cout<<o6.get(0)<<endl;
+
+    DynamicArray<string> o7,o8;
+    o7.append("Hello");
+    o8=o7;
+    cout<<o8.get(0)<<endl;
+
+    DynamicArray<Student> o9,o10;
+    o9.append(Student("Sara",2));
+    o10=o9;
+    cout<<o10.get(0).name<<endl;
+
     return 0;
 }
