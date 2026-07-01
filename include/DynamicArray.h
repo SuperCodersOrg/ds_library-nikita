@@ -239,6 +239,20 @@ public:
     data = my_new_array<T>(currCap);
        }
 
+
+// =========================
+// Destructor
+// =========================
+
+    ~DynamicArray(){
+        my_delete_array(data, currCap);
+
+        data = nullptr;
+        currSize = 0;
+        currCap = 0;
+    }
+
+
 // =========================
 // Append
 // =========================
