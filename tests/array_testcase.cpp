@@ -149,6 +149,7 @@ int main()
     std::cout << "Capacity: " << floatArray.capacity() << '\n';
 
 
+// APPEND METHOD TEST CASES
 
     std::cout << "\n===== APPEND TESTS =====\n";
 
@@ -177,6 +178,76 @@ int main()
     a5.append(Student("Sara",102));
     std::cout << a5.get(0).name << " " << a5.get(1).name << endl;
 
+
+// DESTRUCTOR TEST CASES
+cout << "\n===== DESTRUCTOR TEST 1 =====\n";
+{
+    DynamicArray<int> arr;
+
+    for(int i = 1; i <= 10; i++)
+    {
+        arr.append(i);
+    }
+
+    cout << "Size before destruction: " << arr.size() << endl;
+}
+cout << "DynamicArray Destructor Called\n";
+
+
+cout << "\n===== DESTRUCTOR TEST 2 =====\n";
+{
+    DynamicArray<double> arr;
+
+    for(int i = 1; i <= 10; i++)
+    {
+        arr.append(i * 1.5);
+    }
+
+    cout << "Size before destruction: " << arr.size() << endl;
+}
+cout << "DynamicArray Destructor Called\n";
+
+
+cout << "\n===== DESTRUCTOR TEST 3 =====\n";
+{
+    DynamicArray<char> arr;
+
+    for(char ch = 'A'; ch <= 'J'; ch++)
+    {
+        arr.append(ch);
+    }
+
+    cout << "Size before destruction: " << arr.size() << endl;
+}
+cout << "DynamicArray Destructor Called\n";
+
+
+cout << "\n===== DESTRUCTOR TEST 4 =====\n";
+{
+    DynamicArray<string> arr;
+
+    for(int i = 1; i <= 5; i++)
+    {
+        arr.append("Student");
+    }
+
+    cout << "Size before destruction: " << arr.size() << endl;
+}
+cout << "DynamicArray Destructor Called\n";
+
+
+cout << "\n===== DESTRUCTOR TEST 5 =====\n";
+{
+    DynamicArray<Student> arr;
+
+    for(int i = 1; i <= 5; i++)
+    {
+        arr.append(Student("Student", i));
+    }
+
+    cout << "Size before destruction: " << arr.size() << endl;
+}
+cout << "DynamicArray Destructor Called\n";
 
 
     return 0;
