@@ -218,13 +218,11 @@ private:
 
     void resize(int newCapacity){
     T* newData = my_new_array<T>(newCapacity);
-
     for (int i = 0; i < currSize; i++){
         newData[i] = data[i];
     }
 
     my_delete_array(data, currCap);
-
     data = newData;
     currCap = newCapacity;
     }
@@ -240,6 +238,18 @@ public:
 
     data = my_new_array<T>(currCap);
        }
+
+// =========================
+// Append
+// =========================
+    void append(const T& value){
+        if (currSize == currCap){
+            resize(currCap * 2);
+        }
+        data[currSize] = value;
+        currSize++;
+    }
+
 
 // =========================
 // Size
