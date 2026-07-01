@@ -212,7 +212,22 @@ private:
 
     static const int MIN_CAPACITY = 4;
 
-    void resize(int newCapacity);
+// =========================
+     // Resize 
+   // =========================
+
+    void resize(int newCapacity){
+    T* newData = my_new_array<T>(newCapacity);
+
+    for (int i = 0; i < currSize; i++){
+        newData[i] = data[i];
+    }
+
+    my_delete_array(data, currCap);
+
+    data = newData;
+    currCap = newCapacity;
+    }
 
 public:
     // =========================
@@ -242,6 +257,9 @@ public:
         return currCap;
     }
 
+
+
+    
 
 };
 
