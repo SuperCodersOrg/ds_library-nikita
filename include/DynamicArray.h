@@ -342,6 +342,19 @@ void remove(int index)
 
 
 // =========================
+// Get
+// =========================
+
+T get(int index) const{
+    if (index < 0 || index >= currSize){
+        throw std::out_of_range("DynamicArray::get - index out of range");
+    }
+
+    return data[index];
+}
+
+
+// =========================
 // Size
 // =========================
 
