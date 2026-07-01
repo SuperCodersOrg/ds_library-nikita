@@ -371,7 +371,22 @@ T get(int index) const{
     }
 
 
+// =========================
+// Shrink To Fit
+// =========================
 
+void shrinkToFit(){
+    if (currSize == currCap){
+        return;
+    }
+
+    int newCapacity =
+        (currSize < MIN_CAPACITY)
+            ? MIN_CAPACITY
+            : currSize;
+
+    resize(newCapacity);
+}
     
 
 };
