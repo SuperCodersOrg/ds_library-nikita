@@ -254,6 +254,20 @@ public:
 
 
 // =========================
+// Copy Constructor
+// =========================
+
+    DynamicArray<T>(const DynamicArray& other){
+        currSize = other.currSize;
+        currCap = other.currCap;
+        data = my_new_array<T>(currCap);
+        for (int i = 0; i < currSize; i++){
+            data[i] = other.data[i];
+        }
+    }
+
+
+// =========================
 // Append
 // =========================
     void append(const T& value){
