@@ -311,5 +311,47 @@ cout << "\n===== COPY CONSTRUCTOR TESTS =====\n";
     o10=o9;
     cout<<o10.get(0).name<<endl;
 
+
+// INSERT TEST CASES
+
+    cout << "\n===== INSERT TESTS =====\n";
+
+    DynamicArray<int> i1;
+    i1.append(20);
+    i1.append(30);
+    i1.insert(0,10);
+    for(int i=0;i<i1.size();i++) cout << i1.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<double> i2;
+    i2.append(1.1);
+    i2.append(3.3);
+    i2.insert(1,2.2);
+    for(int i=0;i<i2.size();i++) cout << i2.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<char> i3;
+    i3.append('A');
+    i3.append('C');
+    i3.insert(1,'B');
+    for(int i=0;i<i3.size();i++) cout << i3.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<string> i4;
+    i4.append("Apple");
+    i4.append("Cherry");
+    i4.insert(1,"Banana");
+    for(int i=0;i<i4.size();i++) cout << i4.get(i) << " ";
+    cout << endl;
+
+    DynamicArray<Student> i5;
+    i5.append(Student("Ali",1));
+    i5.append(Student("Sara",3));
+    i5.insert(1,Student("Ahmed",2));
+    for(int i=0;i<i5.size();i++)
+        cout << i5.get(i).name << " ";
+    cout << endl;
+
+
     return 0;
 }
