@@ -2,6 +2,7 @@
 #include <string>
 #include <stdexcept>
 #include "DynamicArray.h"
+using namespace std;
 
 // 1. Destructor tracking class 
 // Issue: Objects allocate heap memory and rely on destructor to free it
@@ -94,12 +95,19 @@
 //     return 0;
 // }
 
+struct Student {
+    string name;
+    int rollNo;
+
+    Student() : name(""), rollNo(0) {}
+    Student(string n, int r) : name(n), rollNo(r) {}
+};
 
 
 int main()
 {
 
-
+// Constructor Test Cases 
 
     // Test Case 1 : Integer
     DynamicArray<int> intArray;
@@ -139,6 +147,37 @@ int main()
     std::cout << "Float Array\n";
     std::cout << "Size: " << floatArray.size() << '\n';
     std::cout << "Capacity: " << floatArray.capacity() << '\n';
+
+
+
+    std::cout << "\n===== APPEND TESTS =====\n";
+
+    DynamicArray<int> a1;
+    a1.append(10);
+    a1.append(20);
+    std::cout << a1.get(0) << " " << a1.get(1) << endl;
+
+    DynamicArray<double> a2;
+    a2.append(2.5);
+    a2.append(5.8);
+    std::cout << a2.get(0) << " " << a2.get(1) << endl;
+
+    DynamicArray<char> a3;
+    a3.append('A');
+    a3.append('B');
+    std::cout << a3.get(0) << " " << a3.get(1) << endl;
+
+    DynamicArray<string> a4;
+    a4.append("Ali");
+    a4.append("Sara");
+    std::cout << a4.get(0) << " " << a4.get(1) << endl;
+
+    DynamicArray<Student> a5;
+    a5.append(Student("Ali",101));
+    a5.append(Student("Sara",102));
+    std::cout << a5.get(0).name << " " << a5.get(1).name << endl;
+
+
 
     return 0;
 }
