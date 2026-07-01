@@ -268,6 +268,25 @@ public:
 
 
 // =========================
+// Copy Assignment Operator
+// =========================
+    DynamicArray<T>& operator=(const DynamicArray& other){
+        if (this == &other){
+            return *this;
+        }
+
+        my_delete_array(data, currCap);
+        currSize = other.currSize;
+        currCap = other.currCap;
+        data = my_new_array<T>(currCap);
+        for (int i = 0; i < currSize; i++){
+            data[i] = other.data[i];
+        }
+        return *this;
+    }
+
+
+// =========================
 // Append
 // =========================
     void append(const T& value){
