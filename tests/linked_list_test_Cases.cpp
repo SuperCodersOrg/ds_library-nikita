@@ -102,5 +102,67 @@ int main(){
     }
     cout<<endl;
     
+
+    // INSERTBACK TEST CASES
+    cout << "\n===== INSERT BACK TESTS =====\n";
+
+    // TC1
+    LinkedList<int> b1;
+    b1.insertBack(10);
+    b1.insertBack(20);
+    b1.insertBack(30);
+
+    for(int i=0;i<b1.size();i++)
+        cout<<b1.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC2
+    LinkedList<double> b2;
+    b2.insertBack(1.1);
+    b2.insertBack(2.2);
+    b2.insertBack(3.3);
+
+    for(int i=0;i<b2.size();i++)
+        cout<<b2.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC3
+    LinkedList<char> b3;
+    b3.insertBack('A');
+    b3.insertBack('B');
+    b3.insertBack('C');
+
+    for(int i=0;i<b3.size();i++)
+        cout<<b3.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC4
+    LinkedList<string> b4;
+    b4.insertBack("Apple");
+    b4.insertBack("Banana");
+    b4.insertBack("Cherry");
+
+    for(int i=0;i<b4.size();i++)
+        cout<<b4.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC5
+    LinkedList<Student> b5;
+    b5.insertBack(Student("Ali",1));
+    b5.insertBack(Student("Sara",2));
+    b5.insertBack(Student("Ahmed",3));
+
+    for(int i=0;i<b5.size();i++)
+    {
+        cout<<b5.get(i).name<<" ";
+    }
+    cout<<endl;
+
+
+
     return 0;
 }
