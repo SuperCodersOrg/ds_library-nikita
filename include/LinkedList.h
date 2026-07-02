@@ -186,6 +186,32 @@ public:
         return current->data;
     }
 
-    
+
+
+     // Size
+    int size() const{
+        return currentSize;
+    }
+
+
+
+    // Is Empty
+    bool isEmpty() const{
+        return currentSize == 0;
+    }
+
+    // Clear List
+    void clear(){
+        while (head != nullptr){
+            Node* temp = head;
+            head = head->next;
+            my_delete(temp);
+        }
+
+        head = nullptr;
+        tail = nullptr;
+        currentSize = 0;
+    }
+
 };
 #endif
