@@ -33,5 +33,19 @@ public:
         currentSize = 0;
     }
 
+
+     // Insert at Front
+    void insertFront(const T& value){
+        Node* newNode = my_new<Node>(value);
+        newNode->next = head;
+        head = newNode;
+
+        if (currentSize == 0){
+            tail = newNode;
+        }
+        currentSize++;
+    }
+
+
 };
 #endif
