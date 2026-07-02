@@ -86,6 +86,21 @@ public:
 }
 
 
+    // Delete Front
+    void deleteFront(){
+        if (currentSize == 0){
+            throw std::out_of_range("Linked List is empty");
+        }
+
+        Node* temp = head;
+        head = head->next;
+        my_delete(temp);
+        currentSize--;
+        if (currentSize == 0){
+            tail = nullptr;
+        }
+    }
+
 
 };
 #endif
