@@ -163,6 +163,65 @@ int main(){
     cout<<endl;
 
 
+    // INSERT AT ANY INDEX TEST CASES
+    cout << "\n===== INSERT AT INDEX TESTS =====\n";
+
+    // TC1
+    LinkedList<int> i1;
+    i1.insertBack(10);
+    i1.insertBack(30);
+    i1.insert(1,20);
+
+    for(int i=0;i<i1.size();i++)
+        cout<<i1.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC2
+    LinkedList<double> i2;
+    i2.insertBack(1.1);
+    i2.insertBack(3.3);
+    i2.insert(1,2.2);
+
+    for(int i=0;i<i2.size();i++)
+        cout<<i2.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC3
+    LinkedList<char> i3;
+    i3.insertBack('A');
+    i3.insertBack('C');
+    i3.insert(1,'B');
+
+    for(int i=0;i<i3.size();i++)
+        cout<<i3.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC4
+    LinkedList<string> i4;
+    i4.insertBack("Apple");
+    i4.insertBack("Cherry");
+    i4.insert(1,"Banana");
+
+    for(int i=0;i<i4.size();i++)
+        cout<<i4.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC5
+    LinkedList<Student> i5;
+    i5.insertBack(Student("Ali",1));
+    i5.insertBack(Student("Sara",3));
+    i5.insert(1,Student("Ahmed",2));
+
+    for(int i=0;i<i5.size();i++)
+    {
+        cout<<i5.get(i).name<<" ";
+    }
+    cout<<endl;
+
 
     return 0;
 }
