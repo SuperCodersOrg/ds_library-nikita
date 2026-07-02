@@ -487,5 +487,33 @@ int main(){
     cout << g5.get(0).name << " "
         << g5.get(0).rollNo << endl;
 
+
+
+    //Size TEST CASES
+    cout << "\n===== SIZE TESTS =====\n";
+
+    LinkedList<int> sz1;
+    cout << sz1.size() << endl;
+
+    LinkedList<double> sz2;
+    sz2.insertBack(1.1);
+    cout << sz2.size() << endl;
+
+    LinkedList<char> sz3;
+    sz3.insertBack('A');
+    sz3.insertBack('B');
+    cout << sz3.size() << endl;
+
+    LinkedList<string> sz4;
+    sz4.insertBack("One");
+    sz4.insertBack("Two");
+    sz4.insertBack("Three");
+    cout << sz4.size() << endl;
+
+    LinkedList<Student> sz5;
+    sz5.insertBack(Student("Ali",1));
+    cout << sz5.size() << endl;
+
+
     return 0;
 }
