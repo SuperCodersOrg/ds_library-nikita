@@ -47,5 +47,19 @@ public:
     }
 
 
+    // Insert at Back
+    void insertBack(const T& value){
+        Node* newNode = my_new<Node>(value);
+        if (currentSize == 0){
+            head = tail = newNode;
+        }else{
+            tail->next = newNode;
+            tail = newNode;
+        }
+        currentSize++;
+    }
+
+
+
 };
 #endif
