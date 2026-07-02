@@ -463,7 +463,29 @@ int main(){
     cout << s5.search(Student("Sara",2)) << endl;
 
 
+    // Get TEST CASES
+    cout << "\n===== GET TESTS =====\n";
 
+    LinkedList<int> g1;
+    g1.insertBack(100);
+    cout << g1.get(0) << endl;
+
+    LinkedList<double> g2;
+    g2.insertBack(5.5);
+    cout << g2.get(0) << endl;
+
+    LinkedList<char> g3;
+    g3.insertBack('X');
+    cout << g3.get(0) << endl;
+
+    LinkedList<string> g4;
+    g4.insertBack("Hello");
+    cout << g4.get(0) << endl;
+
+    LinkedList<Student> g5;
+    g5.insertBack(Student("Ali",10));
+    cout << g5.get(0).name << " "
+        << g5.get(0).rollNo << endl;
 
     return 0;
 }
