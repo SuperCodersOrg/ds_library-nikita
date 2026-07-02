@@ -169,7 +169,23 @@ public:
         }
         return false;
     }
-    
 
+
+
+
+    // Get Element
+    T get(int index) const{
+        if (index < 0 || index >= currentSize){
+            throw std::out_of_range("Invalid index");
+        }
+
+        Node* current = head;
+        for (int i = 0; i < index; i++){
+            current = current->next;
+        }
+        return current->data;
+    }
+
+    
 };
 #endif
