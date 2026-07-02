@@ -234,5 +234,22 @@ public:
 
 
 
+    // Copy Assignment Operator
+    LinkedList& operator=(const LinkedList& other){
+        if (this == &other){
+            return *this;
+        }
+
+        clear();
+
+        Node* current = other.head;
+        while (current != nullptr){
+            insertBack(current->data);
+            current = current->next;
+        }
+        return *this;
+    }
+    
+
 };
 #endif
