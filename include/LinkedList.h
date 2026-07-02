@@ -128,5 +128,34 @@ public:
         currentSize--;
     }
 
+
+   // Remove at Index
+    void remove(int index) {
+        if (index < 0 || index >= currentSize){
+            throw std::out_of_range("Invalid index");
+        }
+
+        if (index == 0){
+            deleteFront();
+            return;
+        }
+
+        if (index == currentSize - 1){
+            deleteBack();
+            return;
+        }
+
+        Node* previous = head;
+        for (int i = 0; i < index - 1; i++){
+            previous = previous->next;
+        }
+
+        Node* temp = previous->next;
+        previous->next = temp->next;
+        my_delete(temp);
+        currentSize--;
+    }
+
+
 };
 #endif
