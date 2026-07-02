@@ -102,5 +102,31 @@ public:
     }
 
 
+    // Delete Back
+    void deleteBack(){
+        if (currentSize == 0) {
+            throw std::out_of_range("Linked List is empty");
+        }
+
+        if (currentSize == 1){
+            my_delete(head);
+
+            head = nullptr;
+            tail = nullptr;
+            currentSize = 0;
+            return;
+        }
+
+        Node* current = head;
+        while (current->next != tail) {
+            current = current->next;
+        }
+
+        my_delete(tail);
+        tail = current;
+        tail->next = nullptr;
+        currentSize--;
+    }
+
 };
 #endif
