@@ -43,7 +43,64 @@ int main(){
 
 
      
+    // INSERTFRONT TEST CASES
+    cout << "\n===== INSERT FRONT TESTS =====\n";
 
+    // TC1
+    LinkedList<int> f1;
+    f1.insertFront(30);
+    f1.insertFront(20);
+    f1.insertFront(10);
+
+    for(int i=0;i<f1.size();i++)
+        cout<<f1.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC2
+    LinkedList<double> f2;
+    f2.insertFront(3.3);
+    f2.insertFront(2.2);
+    f2.insertFront(1.1);
+
+    for(int i=0;i<f2.size();i++)
+        cout<<f2.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC3
+    LinkedList<char> f3;
+    f3.insertFront('C');
+    f3.insertFront('B');
+    f3.insertFront('A');
+
+    for(int i=0;i<f3.size();i++)
+        cout<<f3.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC4
+    LinkedList<string> f4;
+    f4.insertFront("Cherry");
+    f4.insertFront("Banana");
+    f4.insertFront("Apple");
+
+    for(int i=0;i<f4.size();i++)
+        cout<<f4.get(i)<<" ";
+    cout<<endl;
+
+
+    // TC5
+    LinkedList<Student> f5;
+    f5.insertFront(Student("Sara",3));
+    f5.insertFront(Student("Ali",2));
+    f5.insertFront(Student("Ahmed",1));
+
+    for(int i=0;i<f5.size();i++)
+    {
+        cout<<f5.get(i).name<<" ";
+    }
+    cout<<endl;
     
     return 0;
 }
