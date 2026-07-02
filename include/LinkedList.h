@@ -213,5 +213,26 @@ public:
         currentSize = 0;
     }
 
+
+    // Destructor
+    ~LinkedList(){
+        clear();
+    }
+
+    // Copy Constructor
+    LinkedList(const LinkedList& other){
+        head = nullptr;
+        tail = nullptr;
+        currentSize = 0;
+        Node* current = other.head;
+
+        while (current != nullptr){
+            insertBack(current->data);
+            current = current->next;
+        }
+    }
+
+
+
 };
 #endif
