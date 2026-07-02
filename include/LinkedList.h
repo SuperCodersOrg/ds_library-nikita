@@ -60,6 +60,32 @@ public:
     }
 
 
+    // Insert at Index
+    void insert(int index , const T& value){
+    if(index <0 || index >currentSize ){
+        throw std:: out_of_range("Invalid index");
+    }
+    if(index == 0){
+        insertFront(value);
+        return;
+    }
+    if(index == currentSize){
+        insertBack(value);
+        return;
+    }
+
+    Node * previous = head;
+    for(int i =0; i< index-1; i++){
+        previous = previous ->next;
+    }
+
+    Node* newNode = my_new<Node>(value);
+    newNode ->next = previous ->next;
+    previous -> next = newNode;
+    currentSize++;
+}
+
+
 
 };
 #endif
