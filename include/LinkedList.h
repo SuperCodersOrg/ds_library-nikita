@@ -157,5 +157,19 @@ public:
     }
 
 
+
+     // Search
+    bool search(const T& value) const{
+        Node* current = head;
+        while (current != nullptr){
+            if (current->data == value){
+                return true;
+            }
+            current = current->next;
+        }
+        return false;
+    }
+    
+
 };
 #endif
