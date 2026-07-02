@@ -430,5 +430,40 @@ int main(){
         cout << r5.get(i).name << " ";
     cout << endl;
 
+
+
+    // SEARCH TEST CASES
+    cout << "\n===== SEARCH TESTS =====\n";
+
+    LinkedList<int> s1;
+    s1.insertBack(10);
+    s1.insertBack(20);
+    s1.insertBack(30);
+    cout << s1.search(20) << endl;
+
+    LinkedList<double> s2;
+    s2.insertBack(1.1);
+    s2.insertBack(2.2);
+    cout << s2.search(2.2) << endl;
+
+    LinkedList<char> s3;
+    s3.insertBack('A');
+    s3.insertBack('B');
+    cout << s3.search('B') << endl;
+
+    LinkedList<string> s4;
+    s4.insertBack("Ali");
+    s4.insertBack("Sara");
+    cout << s4.search("Sara") << endl;
+
+    LinkedList<Student> s5;
+    s5.insertBack(Student("Ali",1));
+    s5.insertBack(Student("Sara",2));
+
+    cout << s5.search(Student("Sara",2)) << endl;
+
+
+
+
     return 0;
 }
