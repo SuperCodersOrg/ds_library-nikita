@@ -223,5 +223,212 @@ int main(){
     cout<<endl;
 
 
+
+    // DELETE BACK TEST CASES
+    cout << "\n===== DELETE FRONT TESTS =====\n";
+
+    // TC1
+    LinkedList<int> df1;
+    df1.insertBack(10);
+    df1.insertBack(20);
+    df1.insertBack(30);
+
+    df1.deleteFront();
+
+    for(int i=0;i<df1.size();i++)
+        cout << df1.get(i) << " ";
+    cout << endl;
+
+
+    // TC2
+    LinkedList<double> df2;
+    df2.insertBack(1.1);
+    df2.insertBack(2.2);
+    df2.insertBack(3.3);
+
+    df2.deleteFront();
+
+    for(int i=0;i<df2.size();i++)
+        cout << df2.get(i) << " ";
+    cout << endl;
+
+
+    // TC3
+    LinkedList<char> df3;
+    df3.insertBack('A');
+    df3.insertBack('B');
+    df3.insertBack('C');
+
+    df3.deleteFront();
+
+    for(int i=0;i<df3.size();i++)
+        cout << df3.get(i) << " ";
+    cout << endl;
+
+
+    // TC4
+    LinkedList<string> df4;
+    df4.insertBack("Apple");
+    df4.insertBack("Banana");
+    df4.insertBack("Cherry");
+
+    df4.deleteFront();
+
+    for(int i=0;i<df4.size();i++)
+        cout << df4.get(i) << " ";
+    cout << endl;
+
+
+    // TC5
+    LinkedList<Student> df5;
+    df5.insertBack(Student("Ali",1));
+    df5.insertBack(Student("Sara",2));
+    df5.insertBack(Student("Ahmed",3));
+
+    df5.deleteFront();
+
+    for(int i=0;i<df5.size();i++)
+        cout << df5.get(i).name << " ";
+    cout << endl;
+
+
+
+
+    //DELETE BACK TEST CASES 
+    cout << "\n===== DELETE BACK TESTS =====\n";
+
+    // TC1
+    LinkedList<int> db1;
+    db1.insertBack(10);
+    db1.insertBack(20);
+    db1.insertBack(30);
+
+    db1.deleteBack();
+
+    for(int i=0;i<db1.size();i++)
+        cout << db1.get(i) << " ";
+    cout << endl;
+
+
+    // TC2
+    LinkedList<double> db2;
+    db2.insertBack(1.1);
+    db2.insertBack(2.2);
+    db2.insertBack(3.3);
+
+    db2.deleteBack();
+
+    for(int i=0;i<db2.size();i++)
+        cout << db2.get(i) << " ";
+    cout << endl;
+
+
+    // TC3
+    LinkedList<char> db3;
+    db3.insertBack('A');
+    db3.insertBack('B');
+    db3.insertBack('C');
+
+    db3.deleteBack();
+
+    for(int i=0;i<db3.size();i++)
+        cout << db3.get(i) << " ";
+    cout << endl;
+
+
+    // TC4
+    LinkedList<string> db4;
+    db4.insertBack("Apple");
+    db4.insertBack("Banana");
+    db4.insertBack("Cherry");
+
+    db4.deleteBack();
+
+    for(int i=0;i<db4.size();i++)
+        cout << db4.get(i) << " ";
+    cout << endl;
+
+
+    // TC5
+    LinkedList<Student> db5;
+    db5.insertBack(Student("Ali",1));
+    db5.insertBack(Student("Sara",2));
+    db5.insertBack(Student("Ahmed",3));
+
+    db5.deleteBack();
+
+    for(int i=0;i<db5.size();i++)
+        cout << db5.get(i).name << " ";
+    cout << endl;
+
+
+
+    //REMOVE TEST CASES
+    cout << "\n===== REMOVE TESTS =====\n";
+
+    // TC1
+    LinkedList<int> r1;
+    r1.insertBack(10);
+    r1.insertBack(20);
+    r1.insertBack(30);
+
+    r1.remove(1);
+
+    for(int i=0;i<r1.size();i++)
+        cout << r1.get(i) << " ";
+    cout << endl;
+
+
+    // TC2
+    LinkedList<double> r2;
+    r2.insertBack(1.1);
+    r2.insertBack(2.2);
+    r2.insertBack(3.3);
+
+    r2.remove(0);
+
+    for(int i=0;i<r2.size();i++)
+        cout << r2.get(i) << " ";
+    cout << endl;
+
+
+    // TC3
+    LinkedList<char> r3;
+    r3.insertBack('A');
+    r3.insertBack('B');
+    r3.insertBack('C');
+
+    r3.remove(2);
+
+    for(int i=0;i<r3.size();i++)
+        cout << r3.get(i) << " ";
+    cout << endl;
+
+
+    // TC4
+    LinkedList<string> r4;
+    r4.insertBack("One");
+    r4.insertBack("Two");
+    r4.insertBack("Three");
+
+    r4.remove(1);
+
+    for(int i=0;i<r4.size();i++)
+        cout << r4.get(i) << " ";
+    cout << endl;
+
+
+    // TC5
+    LinkedList<Student> r5;
+    r5.insertBack(Student("Ali",1));
+    r5.insertBack(Student("Sara",2));
+    r5.insertBack(Student("Ahmed",3));
+
+    r5.remove(1);
+
+    for(int i=0;i<r5.size();i++)
+        cout << r5.get(i).name << " ";
+    cout << endl;
+
     return 0;
 }
